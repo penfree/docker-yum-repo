@@ -17,8 +17,10 @@ docker pull dgutierrez1287/yum-repo
 The bare minimum need to run the container is a link to the repo directory on the host
 and port.
 
+If you have some other static files like existing public repo files, they can be mount to /files, which will be accessed from HOST_IP:PORT/files/. i
+
 ```
-docker run -d -p 8080:80 -v /opt/repo:/repo dgutierrez1287/yum-repo
+docker run -d -p 8080:80 -v /opt/files:/files -v /opt/repo:/repo dgutierrez1287/yum-repo
 ```
 
 ### Mapping Logs

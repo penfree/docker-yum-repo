@@ -32,7 +32,7 @@ COPY --from=builder /go/src/github.com/dgutierrez1287/docker-yum-repo/repoScanne
 RUN chmod 700 /root/repoScanner
 
 EXPOSE 80
-VOLUME /repo /logs
+VOLUME /repo /logs /files
 
 ENV DEBUG false
 ENV LINUX_HOST true
